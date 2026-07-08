@@ -1,0 +1,598 @@
+:root {
+  --bg-teal: #3E8E89;
+  --bg-teal-deep: #2F6E6A;
+  --lace: #F5F2EA;
+  --envelope: #C7C2E3;
+  --envelope-shadow: #A79FCB;
+  --envelope-flap: #D6D2EA;
+  --card-cream: #FBF8F2;
+  --olive: #ACA96A;
+  --olive-light: #DCDAB8;
+  --text-dark: #3A3630;
+  --text-muted: #8B8578;
+  --pink: #E7B9C6;
+  --border-soft: #E4DFD0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-teal);
+  color: var(--text-dark);
+  font-family: 'Jost', sans-serif;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+.serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 70px 24px 60px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: rgba(24, 22, 22, 0.842);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  font-weight: 600;
+  font-style: italic;
+}
+
+.hero-date {
+  margin-top: 12px;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.panel {
+  background: var(--card-cream);
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.panel h2 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.panel-text {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.data-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.data-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--olive);
+  text-transform: uppercase;
+}
+
+.data-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+}
+
+.data-sub {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: var(--olive);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 28px;
+  margin-top: 14px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  width: 100%;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.cta-btn:hover,
+.cta-btn:focus-visible {
+  background: #948F52;
+  transform: translateY(-1px);
+}
+
+.cta-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+/* ===================== ESCENA DEL SOBRE ===================== */
+.envelope-scene {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.envelope-scene .eyebrow {
+  color: rgba(24, 22, 22, 0.842);
+  margin-bottom: 26px;
+  z-index: 1;
+}
+
+.doily {
+  position: absolute;
+  width: min(480px, 90vw);
+  height: min(480px, 90vw);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, var(--lace) 0 55%, transparent 56%) center / 22px 22px,
+    var(--lace);
+  -webkit-mask-image: radial-gradient(circle, black 96%, transparent 100%);
+  mask-image: radial-gradient(circle, black 96%, transparent 100%);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.floral {
+  position: absolute;
+  font-size: 2.6rem;
+  z-index: 3;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+  pointer-events: none;
+}
+
+.floral-1 {
+  top: 8%;
+  left: 12%;
+  transform: rotate(-15deg);
+}
+
+.floral-2 {
+  bottom: 10%;
+  right: 10%;
+  transform: rotate(20deg);
+}
+
+.envelope-wrap {
+  position: relative;
+  width: min(340px, 82vw);
+  height: 220px;
+  z-index: 1;
+  perspective: 1200px;
+  transition: transform 0.7s cubic-bezier(.2, .8, .2, 1);
+  will-change: transform;
+}
+
+.envelope-body {
+  position: absolute;
+  inset: 0;
+  background: var(--envelope);
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.envelope-body::before,
+.envelope-body::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.envelope-body::before {
+  left: 0;
+  border-width: 0 0 110px 170px;
+  border-color: transparent transparent var(--envelope-shadow) transparent;
+}
+
+.envelope-body::after {
+  right: 0;
+  border-width: 110px 170px 0 0;
+  border-color: transparent var(--envelope-shadow) transparent transparent;
+  opacity: 0.5;
+}
+
+.card {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  width: 78%;
+  transform: translate(-50%, 6%);
+  background: var(--card-cream);
+  border-radius: 3px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 26px 22px;
+  z-index: 2;
+  transition: transform 0.7s cubic-bezier(.2, .8, .2, 1), box-shadow 0.7s ease, opacity 0.25s ease, visibility 0.25s ease;
+  text-align: left;
+  max-height: 60vh;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background: var(--envelope-flap);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top center;
+  transition: transform 0.7s cubic-bezier(.2, .8, .2, 1);
+  z-index: 4;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.seal {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-55%, -15%);
+  width: 46px;
+  height: 46px;
+  background: var(--olive);
+  border-radius: 50%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+  border: none;
+}
+
+.seal:hover {
+  transform: translate(-55%, 0%) scale(1.08);
+}
+
+.open-hint {
+  margin-top: 22px;
+  color: rgba(24, 22, 22, 0.842);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  z-index: 1;
+}
+
+.envelope-wrap.open {
+  transform: translateY(15px);
+}
+
+.envelope-wrap.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.envelope-wrap.open .card {
+  transform: translate(-50%, 0%);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.envelope-wrap.open .seal {
+  display: none;
+}
+
+/* ===================== TARJETA RSVP (contenido interno) ===================== */
+.card h2 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 16px 0 6px;
+}
+
+.name-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--border-soft);
+  background: transparent;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  padding: 4px 2px 10px;
+  color: var(--text-dark);
+}
+
+.name-input:focus-visible {
+  outline: none;
+  border-bottom-color: var(--olive);
+}
+
+.guest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 6px;
+}
+
+.guest-block {
+  border-bottom: 1px solid var(--border-soft);
+  padding-bottom: 14px;
+}
+
+.guest-block:last-child {
+  border-bottom: none;
+}
+
+.guest-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.attend-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border-soft);
+  border-radius: 3px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.option-pill input {
+  accent-color: var(--olive);
+  width: 16px;
+  height: 16px;
+}
+
+.option-pill.selected {
+  background: var(--olive-light);
+  border-color: var(--olive);
+}
+
+#restriccion {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  color: var(--text-dark);
+  padding: 10px 12px;
+  margin-top: 6px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.85rem;
+  border-radius: 3px;
+}
+
+.rsvp-deadline {
+  text-align: center;
+  margin-top: 20px;
+  color: rgba(24, 22, 22, 0.842);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+#restriccion:focus-visible,
+.seal:focus-visible,
+.cta-btn:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 2px;
+}
+
+.error-text {
+  color: #C0524B;
+}
+
+.success-text {
+  color: var(--olive);
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.back-link {
+  text-align: center;
+  margin-top: 26px;
+}
+
+.back-link a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .content {
+    max-width: 860px;
+    padding: 84px 32px 80px;
+  }
+
+  .hero {
+    margin-bottom: 64px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 4.2vw, 4rem);
+  }
+
+  .panel {
+    padding: 36px 40px;
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .data-value {
+    font-size: 1.8rem;
+  }
+
+  .cta-btn {
+    width: auto;
+    min-width: 220px;
+  }
+
+  .envelope-scene {
+    padding: 56px 24px;
+  }
+
+  .envelope-wrap {
+    width: min(420px, 70vw);
+    height: 260px;
+  }
+
+  .card {
+    width: 82%;
+    padding: 28px 24px;
+  }
+
+  .seal {
+    width: 52px;
+    height: 52px;
+    font-size: 1.2rem;
+  }
+
+  .envelope-wrap.open {
+    transform: translateY(20px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    max-width: 1040px;
+    padding: 96px 40px 90px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.4rem, 4.8vw, 4.8rem);
+  }
+
+  .panel {
+    padding: 42px 48px;
+  }
+
+  .panel h2 {
+    font-size: 1.6rem;
+  }
+
+  .panel-text {
+    font-size: 1rem;
+  }
+
+  .envelope-scene {
+    padding: 64px 32px;
+  }
+
+  .envelope-wrap {
+    width: min(460px, 56vw);
+    height: 300px;
+  }
+
+  .floral {
+    font-size: 3.2rem;
+  }
+
+  .card {
+    width: 78%;
+    padding: 32px 28px;
+  }
+
+  .seal {
+    width: 56px;
+    height: 56px;
+    font-size: 1.25rem;
+  }
+
+  .envelope-wrap.open {
+    transform: translateY(15px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .envelope-flap,
+  .card {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Boda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <main class="envelope-scene">
+
+    <p class="eyebrow">Estás invitado a</p>
+
+    <div class="doily"></div>
+
+    <div class="envelope-wrap" id="envelopeWrap">
+      <div class="envelope-body"></div>
+      <div class="card" id="rsvpCard">
+        <!-- El contenido se genera dinámicamente en rsvp.js -->
+        <p class="panel-text" id="loadingText">Cargando invitación...</p>
+      </div>
+      <div class="envelope-flap"></div>
+      <button class="seal" id="sealBtn" aria-label="Abrir invitación">✧</button>
+    </div>
+
+    <p class="open-hint" id="openHint">Toca el sello para abrir tu invitación</p>
+    <p class="rsvp-deadline" id="deadlineText" style="display:none;">Por favor confirma antes del [Fecha]</p>
+
+
+  </main>
+
+    <script src="js/rsvp.js"></script>
+
+  </body>
+
+  </html>
