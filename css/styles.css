@@ -172,7 +172,7 @@ h2,
 
   background-image:
     linear-gradient(rgba(10, 15, 20, 0.55), rgba(10, 15, 20, 0.65)),
-    url("../assets/fondo-boda.jpg");
+    url("./assets/fondo-boda.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
