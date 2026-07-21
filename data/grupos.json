@@ -1,10 +1,246 @@
 {
-  "familia01": {
-    "grupo": "Familia Fajardo",
-    "invitados": ["Mírian Romero", "Edwin Fajardo"]
+  "jenny-adrian": {
+    "grupo": "Jenny Rodríguez y Adrián Cafetero",
+    "invitados": [
+      "Jenny Rodríguez",
+      "Adrián Cafetero"
+    ]
   },
-  "familia02": {
-    "grupo": "Familia Pérez 02",
-    "invitados": ["Nombre 1", "Nombre 2"]
+  "mia-camila": {
+    "grupo": "Mia Matamoros y Camila Matamoros",
+    "invitados": [
+      "Mia Matamoros",
+      "Camila Matamoros"
+    ]
+  },
+  "rafael-jem": {
+    "grupo": "Rafael Matamoros y Jem Izaguirre",
+    "invitados": [
+      "Rafael Matamoros",
+      "Jem Izaguirre"
+    ]
+  },
+  "carlos-suyapa-denisse": {
+    "grupo": "Carlos Rivera, Suyapa Matamoros y Denisse Rivera",
+    "invitados": [
+      "Carlos Rivera",
+      "Suyapa Matamoros",
+      "Denisse Rivera"
+    ]
+  },
+  "carlos-blanca": {
+    "grupo": "Carlos Rivera y Blanca Carolina",
+    "invitados": [
+      "Carlos Rivera",
+      "Blanca Carolina"
+    ]
+  },
+  "eduardo-annet": {
+    "grupo": "Eduardo Rivera y Annet Obando",
+    "invitados": [
+      "Eduardo Rivera",
+      "Annet Obando"
+    ]
+  },
+  "alex-edna": {
+    "grupo": "Alex Rivera y Edna Sofía",
+    "invitados": [
+      "Alex Rivera",
+      "Edna Sofía"
+    ]
+  },
+  "carlos-martha-gabriel": {
+    "grupo": "Carlos Cerna, Martha Rodríguez y Gabriel Cerna",
+    "invitados": [
+      "Carlos Cerna",
+      "Martha Rodríguez",
+      "Gabriel Cerna"
+    ]
+  },
+  "nicole-estefano": {
+    "grupo": "Nicole Cerna y Estefano",
+    "invitados": [
+      "Nicole Cerna",
+      "Estefano"
+    ]
+  },
+  "paola-hector": {
+    "grupo": "Paola Cerna y Héctor",
+    "invitados": [
+      "Paola Cerna",
+      "Héctor"
+    ]
+  },
+  "carlos-alina": {
+    "grupo": "Carlos Arias y Alina Diaz",
+    "invitados": [
+      "Carlos Arias",
+      "Alina Diaz"
+    ]
+  },
+  "douglas-maria": {
+    "grupo": "Douglas Rodríguez y María Andrea",
+    "invitados": [
+      "Douglas Rodríguez",
+      "María Andrea"
+    ]
+  },
+  "gabriel-diego": {
+    "grupo": "Gabriel Aplícano y Diego Munguía",
+    "invitados": [
+      "Gabriel Aplícano",
+      "Diego Munguía"
+    ]
+  },
+  "valeria-sergio": {
+    "grupo": "Valeria Solís y Sergio",
+    "invitados": [
+      "Valeria Solís",
+      "Sergio"
+    ]
+  },
+  "german-alejandra": {
+    "grupo": "German y Alejandra",
+    "invitados": [
+      "German",
+      "Alejandra"
+    ]
+  },
+  "freddy-helgui": {
+    "grupo": "Freddy y Helgui",
+    "invitados": [
+      "Freddy",
+      "Helgui"
+    ]
+  },
+  "isaac-maryorie": {
+    "grupo": "Isaac Rodríguez y Maryorie",
+    "invitados": [
+      "Isaac Rodríguez",
+      "Maryorie"
+    ]
+  },
+  "cristian-jorge": {
+    "grupo": "Tía Cristian y Tío Jorge",
+    "invitados": [
+      "Tía Cristian",
+      "Tío Jorge"
+    ]
+  },
+  "walter-patricia": {
+    "grupo": "Walter y Patricia",
+    "invitados": [
+      "Walter",
+      "Patricia"
+    ]
+  },
+  "leonardo-any-maria": {
+    "grupo": "Leonardo Aguilar, Any Matamoros y María Fernanda Aguilar",
+    "invitados": [
+      "Leonardo Aguilar",
+      "Any Matamoros",
+      "María Fernanda Aguilar"
+    ]
+  },
+  "ana-selvin": {
+    "grupo": "Ana Virgina y Selvin Martínez",
+    "invitados": [
+      "Ana Virgina",
+      "Selvin Martínez"
+    ]
+  },
+  "daniela-sebastian-fernando": {
+    "grupo": "Daniela Martínez, Sebastián Aguilar y Fernando Álvarez",
+    "invitados": [
+      "Daniela Martínez",
+      "Sebastián Aguilar",
+      "Fernando Álvarez"
+    ]
+  },
+  "jefferzzon-jennifer": {
+    "grupo": "Jefferzzon Ávila y Jennifer Martínez",
+    "invitados": [
+      "Jefferzzon Ávila",
+      "Jennifer Martínez"
+    ]
+  },
+  "edwin-mirian-diego": {
+    "grupo": "Edwin Fajardo, Mirian Romero y Diego Fajardo",
+    "invitados": [
+      "Edwin Fajardo",
+      "Mirian Romero",
+      "Diego Fajardo"
+    ]
+  },
+  "luis-teresa-roberto": {
+    "grupo": "Luis Romero, Teresa Saravia y Roberto Romero",
+    "invitados": [
+      "Luis Romero",
+      "Teresa Saravia",
+      "Roberto Romero"
+    ]
+  },
+  "jose-daniela": {
+    "grupo": "José Fajardo y Daniela Guzmán",
+    "invitados": [
+      "José Fajardo",
+      "Daniela Guzmán"
+    ]
+  },
+  "carlos-anell": {
+    "grupo": "Carlos Fajardo y Anell Padilla",
+    "invitados": [
+      "Carlos Fajardo",
+      "Anell Padilla"
+    ]
+  },
+  "mauricio-fanny": {
+    "grupo": "Mauricio Fajardo y Fanny Cerrato",
+    "invitados": [
+      "Mauricio Fajardo",
+      "Fanny Cerrato"
+    ]
+  },
+  "luis-bessy": {
+    "grupo": "Luis Romero y Bessy Henriquez",
+    "invitados": [
+      "Luis Romero",
+      "Bessy Henriquez"
+    ]
+  },
+  "cesar-martha": {
+    "grupo": "César González y Martha Barjum",
+    "invitados": [
+      "César González",
+      "Martha Barjum"
+    ]
+  },
+  "gracia-mario": {
+    "grupo": "Gracia Romero y Mario Suazo",
+    "invitados": [
+      "Gracia Romero",
+      "Mario Suazo"
+    ]
+  },
+  "ivania-daniel": {
+    "grupo": "Ivania Maldonado y Daniel Inestroza",
+    "invitados": [
+      "Ivania Maldonado",
+      "Daniel Inestroza"
+    ]
+  },
+  "renato-esposa": {
+    "grupo": "Renato Chavarria y Esposa",
+    "invitados": [
+      "Renato Chavarria",
+      "Esposa"
+    ]
+  },
+  "sindy-irma": {
+    "grupo": "Sindy Reyes y Irma López",
+    "invitados": [
+      "Sindy Reyes",
+      "Irma López"
+    ]
   }
 }
