@@ -1,17 +1,17 @@
 :root {
-  --bg-teal: #3E8E89;
-  --bg-teal-deep: #2F6E6A;
-  --lace: #F5F2EA;
-  --envelope: #C7C2E3;
-  --envelope-shadow: #A79FCB;
-  --envelope-flap: #D6D2EA;
-  --card-cream: #FBF8F2;
-  --olive: #ACA96A;
-  --olive-light: #DCDAB8;
-  --text-dark: #3A3630;
-  --text-muted: #8B8578;
-  --pink: #E7B9C6;
-  --border-soft: #E4DFD0;
+  --bg-teal: #2E3A44;
+  --bg-teal-deep: #212A32;
+  --lace: #EDE9DF;
+  --envelope: #A9A5A0;
+  --envelope-shadow: #85817C;
+  --envelope-flap: #BCB8B0;
+  --card-cream: #F7F3EA;
+  --olive: #C08A3E;
+  --olive-light: #E8D3A8;
+  --text-dark: #33302B;
+  --text-muted: #83807A;
+  --pink: #C98A70;
+  --border-soft: #E1DBCB;
 }
 
 * {
@@ -122,13 +122,13 @@ h2,
 }
 
 .cta-btn {
-  display: inline-block;
+  display: block;
   background: var(--olive);
   color: #fff;
   text-decoration: none;
   text-align: center;
   padding: 14px 28px;
-  margin-top: 14px;
+  margin: 14px auto 0;
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -159,7 +159,6 @@ h2,
   text-transform: uppercase;
 }
 
-/* ===================== ESCENA DEL SOBRE ===================== */
 .envelope-scene {
   min-height: 100vh;
   display: flex;
@@ -170,12 +169,20 @@ h2,
   overflow: hidden;
   padding: 40px 20px;
   text-align: center;
+
+  background-image:
+    linear-gradient(rgba(10, 15, 20, 0.55), rgba(10, 15, 20, 0.65)),
+    url("../assets/fondo-boda.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .envelope-scene .eyebrow {
-  color: rgba(24, 22, 22, 0.842);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 26px;
   z-index: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .doily {
@@ -188,7 +195,7 @@ h2,
     var(--lace);
   -webkit-mask-image: radial-gradient(circle, black 96%, transparent 100%);
   mask-image: radial-gradient(circle, black 96%, transparent 100%);
-  opacity: 0.9;
+  opacity: 0.7;
   z-index: 0;
 }
 
@@ -317,10 +324,11 @@ h2,
 
 .open-hint {
   margin-top: 22px;
-  color: rgba(24, 22, 22, 0.842);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   z-index: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .envelope-wrap.open {
@@ -443,11 +451,12 @@ h2,
 .rsvp-deadline {
   text-align: center;
   margin-top: 20px;
-  color: rgba(24, 22, 22, 0.842);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   z-index: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 #restriccion:focus-visible,
