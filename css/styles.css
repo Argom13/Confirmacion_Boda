@@ -1,6 +1,5 @@
 :root {
   --bg-teal: #2E3A44;
-  --bg-teal-deep: #212A32;
   --lace: #EDE9DF;
   --envelope: #A9A5A0;
   --envelope-shadow: #85817C;
@@ -10,7 +9,6 @@
   --olive-light: #E8D3A8;
   --text-dark: #33302B;
   --text-muted: #83807A;
-  --pink: #C98A70;
   --border-soft: #E1DBCB;
 }
 
@@ -22,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 body {
@@ -37,88 +36,10 @@ h2,
   font-family: 'Playfair Display', serif;
 }
 
-.content {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 70px 24px 60px;
-}
-
-.hero {
-  text-align: center;
-  margin-bottom: 50px;
-  color: #fff;
-}
-
-.eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
-  color: rgba(24, 22, 22, 0.842);
-  margin-bottom: 14px;
-  text-transform: uppercase;
-}
-
-
-.hero h1 {
-  font-size: clamp(2.2rem, 6vw, 3.4rem);
-  font-weight: 600;
-  font-style: italic;
-}
-
-.hero-date {
-  margin-top: 12px;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.panel {
-  background: var(--card-cream);
-  border-radius: 4px;
-  padding: 24px;
-  margin-bottom: 22px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-}
-
-.panel h2 {
-  font-size: 1.4rem;
-  margin-bottom: 14px;
-  font-weight: 600;
-}
-
 .panel-text {
   color: var(--text-muted);
   line-height: 1.7;
   font-size: 0.95rem;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.data-card {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.data-label {
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  color: var(--olive);
-  text-transform: uppercase;
-}
-
-.data-value {
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: 'Playfair Display', serif;
-}
-
-.data-sub {
-  color: var(--text-muted);
-  font-size: 0.85rem;
 }
 
 .cta-btn {
@@ -150,15 +71,6 @@ h2,
   cursor: not-allowed;
 }
 
-.footer {
-  text-align: center;
-  margin-top: 40px;
-  color: rgba(255, 255, 255, 0.8);
-  letter-spacing: 0.2em;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-}
-
 .envelope-scene {
   min-height: 100vh;
   display: flex;
@@ -179,6 +91,9 @@ h2,
 }
 
 .envelope-scene .eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 26px;
   z-index: 1;
@@ -197,26 +112,6 @@ h2,
   mask-image: radial-gradient(circle, black 96%, transparent 100%);
   opacity: 0.7;
   z-index: 0;
-}
-
-.floral {
-  position: absolute;
-  font-size: 2.6rem;
-  z-index: 3;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
-  pointer-events: none;
-}
-
-.floral-1 {
-  top: 8%;
-  left: 12%;
-  transform: rotate(-15deg);
-}
-
-.floral-2 {
-  bottom: 10%;
-  right: 10%;
-  transform: rotate(20deg);
 }
 
 .envelope-wrap {
@@ -261,24 +156,41 @@ h2,
   opacity: 0.5;
 }
 
-.card {
+/* Base: SOLO controla dónde y cómo aparece la tarjeta dentro del sobre.
+   La comparten el formulario y el mensaje de éxito — no toques esto para
+   cambiar el look de uno solo, usa .card--form o .card--success. */
+.card-slot {
   position: absolute;
   left: 50%;
   bottom: 14px;
   width: 78%;
   transform: translate(-50%, 6%);
-  background: var(--card-cream);
-  border-radius: 3px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  padding: 26px 22px;
   z-index: 2;
   transition: transform 0.7s cubic-bezier(.2, .8, .2, 1), box-shadow 0.7s ease, opacity 0.25s ease, visibility 0.25s ease;
-  text-align: left;
   max-height: 60vh;
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+/* Look del FORMULARIO de RSVP — edítalo sin afectar al mensaje de éxito */
+.card--form {
+  background: var(--card-cream);
+  border-radius: 3px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 26px 22px;
+  text-align: left;
+}
+
+/* Look del MENSAJE DE ÉXITO — edítalo sin afectar al formulario */
+.envelope-wrap.open .card-slot.card--success {
+  transform: translate(-50%, -30%);
+  background: var(--card-cream);
+  border-radius: 3px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 26px 22px;
+  text-align: center;
 }
 
 .envelope-flap {
@@ -340,7 +252,7 @@ h2,
   z-index: 1;
 }
 
-.envelope-wrap.open .card {
+.envelope-wrap.open .card-slot {
   transform: translate(-50%, 0%);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
   opacity: 1;
@@ -353,7 +265,7 @@ h2,
 }
 
 /* ===================== TARJETA RSVP (contenido interno) ===================== */
-.card h2 {
+.card--form h2 {
   font-size: 1.15rem;
   margin-bottom: 4px;
 }
@@ -471,52 +383,15 @@ h2,
 }
 
 .success-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   color: var(--olive);
   font-size: 1.05rem;
-  text-align: center;
-}
-
-.back-link {
-  text-align: center;
-  margin-top: 26px;
-}
-
-.back-link a {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.85rem;
-  text-decoration: none;
-}
-
-.back-link a:hover {
-  color: #fff;
 }
 
 @media (min-width: 768px) {
-  .content {
-    max-width: 860px;
-    padding: 84px 32px 80px;
-  }
-
-  .hero {
-    margin-bottom: 64px;
-  }
-
-  .hero h1 {
-    font-size: clamp(3rem, 4.2vw, 4rem);
-  }
-
-  .panel {
-    padding: 36px 40px;
-  }
-
-  .grid-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .data-value {
-    font-size: 1.8rem;
-  }
-
   .cta-btn {
     width: auto;
     min-width: 220px;
@@ -531,8 +406,12 @@ h2,
     height: 260px;
   }
 
-  .card {
+  .card-slot {
     width: 82%;
+  }
+
+  .card--form,
+  .card--success {
     padding: 28px 24px;
   }
 
@@ -545,26 +424,13 @@ h2,
   .envelope-wrap.open {
     transform: translateY(20px);
   }
+
+  .envelope-wrap.open .card-slot.card--success {
+    transform: translate(-50%, -80%);
+  }
 }
 
 @media (min-width: 1024px) {
-  .content {
-    max-width: 1040px;
-    padding: 96px 40px 90px;
-  }
-
-  .hero h1 {
-    font-size: clamp(3.4rem, 4.8vw, 4.8rem);
-  }
-
-  .panel {
-    padding: 42px 48px;
-  }
-
-  .panel h2 {
-    font-size: 1.6rem;
-  }
-
   .panel-text {
     font-size: 1rem;
   }
@@ -578,12 +444,12 @@ h2,
     height: 300px;
   }
 
-  .floral {
-    font-size: 3.2rem;
+  .card-slot {
+    width: 78%;
   }
 
-  .card {
-    width: 78%;
+  .card--form,
+  .card--success {
     padding: 32px 28px;
   }
 
@@ -596,12 +462,16 @@ h2,
   .envelope-wrap.open {
     transform: translateY(15px);
   }
+
+  .envelope-wrap.open .card-slot.card--success {
+    transform: translate(-50%, -120%);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
 
   .envelope-flap,
-  .card {
+  .card-slot {
     transition: none !important;
   }
 }

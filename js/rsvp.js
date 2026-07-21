@@ -221,6 +221,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function mostrarExito() {
     if (!rsvpCard) return;
+    rsvpCard.classList.remove('card--form');
+    rsvpCard.classList.add('card--success');
     rsvpCard.innerHTML = `<p class="panel-text success-text">✅ ¡Gracias! Tu confirmación fue recibida.</p>`;
   }
 
