@@ -87,6 +87,7 @@ h2,
     url("../assets/fondo-boda.jpg");
   background-size: cover;
   background-position: center;
+  background-position-x: 20%;
   background-repeat: no-repeat;
 }
 
@@ -369,6 +370,12 @@ h2,
   text-transform: uppercase;
   z-index: 1;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+
+  display: inline-block;
+  max-width: 80%;
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
 }
 
 #restriccion:focus-visible,
@@ -399,6 +406,9 @@ h2,
 
   .envelope-scene {
     padding: 56px 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .envelope-wrap {
@@ -427,6 +437,11 @@ h2,
 
   .envelope-wrap.open .card-slot.card--success {
     transform: translate(-50%, -80%);
+  }
+
+  .doily {
+    width: min(490px, 90vw);
+    height: min(490px, 90vw);
   }
 }
 
@@ -466,6 +481,20 @@ h2,
   .envelope-wrap.open .card-slot.card--success {
     transform: translate(-50%, -120%);
   }
+
+  .envelope-scene .eyebrow,
+  .open-hint,
+  .rsvp-deadline {
+    font-size: 0.75rem;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  
+
+  .envelope-scene .eyebrow{
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -473,5 +502,59 @@ h2,
   .envelope-flap,
   .card-slot {
     transition: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .envelope-scene .eyebrow,
+  .open-hint,
+  .rsvp-deadline {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+  }
+
+}
+
+@media (max-width: 360px) {
+
+  .envelope-scene .eyebrow,
+  .open-hint,
+  .rsvp-deadline {
+    font-size: 0.65rem;
+    line-height: 1.1;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .doily {
+    width: 92vw;
+    height: 92vw;
+  }
+
+  .envelope-wrap {
+    width: 78vw;
+    height: 48vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .doily {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .envelope-wrap {
+    width: 76vw;
+    height: 46vw;
+  }
+
+  .envelope-scene .eyebrow,
+  .open-hint,
+  .rsvp-deadline {
+    font-size: 0.65rem;
+    line-height: 1.1;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
